@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location | Blue Harbor Coffee</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Zen Kaku Gothic New', sans-serif; color: #333; }
+        .font-eng { font-family: 'Jost', sans-serif; }
+        .page-enter { animation: fadeIn 0.6s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link.active { border-bottom: 2px solid #3b82f6; color: #1d4ed8; }
+        .nav-link.active svg { color: #1d4ed8; }
+    </style>
+</head>
+
+<body class="bg-white flex flex-col min-h-screen">
+
+    <div id="header"></div>
+
+    <main class="flex-grow pt-[112px] md:pt-28">
+
+        <!-- HERO -->
+        <section class="relative h-[80vh] md:h-[620px] w-full overflow-hidden page-enter -mt-[112px] md:-mt-28">
+
+            <!-- ★ JSONから差し替え -->
+            <img id="hero-image"
+                src=""
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <div class="relative h-full flex items-center justify-center text-white text-center">
+                <h1 id="hero-title"
+                    class="text-5xl md:text-7xl font-eng font-bold tracking-widest">
+                </h1>
+            </div>
+
+        </section>
+
+        <div class="max-w-6xl mx-auto py-20 px-6 page-enter">
+
+            <!-- 外観ギャラリー -->
+            <div id="gallery"
+                class="grid md:grid-cols-3 gap-6 mb-16">
+            </div>
+
+            <!-- 地図と情報 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white shadow-xl rounded-xl overflow-hidden border border-gray-100 p-6 md:p-10 items-stretch">
+
+                <!-- 左：地図 -->
+                <div class="flex flex-col gap-8 h-full order-2 md:order-1">
+
+                    <!-- 手書き風地図 -->
+                    <div class="flex-1 min-h-[220px] rounded-xl overflow-hidden shadow-md">
+                        <img id="map-image"
+                            src=""
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Google Map -->
+                    <div class="flex-1 min-h-[220px] rounded-xl overflow-hidden shadow-md">
+                        <iframe id="google-map"
+                            src=""
+                            width="100%" height="100%"
+                            style="border:0;" allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <!-- 右：店舗情報 -->
+                <div id="store-info"
+                    class="bg-gray-50 rounded-xl p-8 md:p-10 flex flex-col justify-center shadow-inner h-full order-1 md:order-2">
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 text-center text-xs text-gray-400 font-eng">
+        © 2024 Blue Harbor Coffee Roasters.
+    </footer>
+
+    <!-- 共通ヘッダー -->
+    <script src="/js/components/loadHeader.js"></script>
+
+    <!-- ★ 店舗情報（JSON描画） -->
+    <script src="/js/pages/storeInfo.js"></script>
+
+</body>
+</html>

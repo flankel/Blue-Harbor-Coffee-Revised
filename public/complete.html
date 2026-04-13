@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Complete | Blue Harbor Coffee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+  body { font-family: 'Zen Kaku Gothic New', sans-serif; color: #333; font-variant-numeric: tabular-nums;}
+  .font-eng {
+    font-family: 'Jost', sans-serif;
+  }
+  .nav-link.active {
+    border-bottom: 2px solid #3b82f6;
+    color: #1d4ed8;
+  }
+  .nav-link.active svg {
+    color: #1d4ed8;
+  }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <div id="header">
+  </div>
+
+  <div class="mt-6 py-12 pt-20 sm:pt-24">
+    <div class="max-w-xl mx-auto px-6 py-16 text-center">
+      <!-- Success Icon -->
+      <div class="flex justify-center mb-8">
+        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+            </path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl font-light tracking-widest mb-6">Order Complete</h1>
+
+      <!-- Message -->
+      <p class="text-lg mb-6">ご注文ありがとうございます。</p>
+      <p class="text-slate-600 mb-10">ご注文を受け付けました。
+        <br>確認メールを送信しましたのでご確認ください。
+        <br>迷惑メールフォルダもあわせてご確認ください。</p>
+
+      <!-- Pickup Info -->
+      <div class="bg-white rounded-xl shadow-sm p-8 text-sm text-slate-600 mb-12">
+        <p class="mb-3">受け取り時間にご来店ください。</p>
+        <p>店舗で
+          <span class="font-semibold text-slate-800">お名前</span>をお伝えください。</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/takeout.html" class="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition">メニューを見る</a>
+        <a href="/index.html" class="bg-gray-200 px-8 py-4 rounded-xl hover:bg-gray-300 transition">トップへ戻る</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 border-t border-gray-200 py-12 text-center text-xs text-gray-400">© 2024 Blue Harbor Coffee Roasters.</footer>
+
+  <!-- Header Loader -->
+  <script src="/js/components/loadHeader.js"></script>
+</body>
+
+</html>

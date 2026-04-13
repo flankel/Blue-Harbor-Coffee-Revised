@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Login</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"
+import {
+getAuth,
+signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyBlBC7PgW3aCvulWTJu3YMs9HPRydRdjY0",
+  authDomain: "blue-harbor-takeout.firebaseapp.com",
+  projectId: "blue-harbor-takeout",
+
+}
+
+const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
+
+window.login = async () => {
+
+const email = document.getElementById("email").value
+const password = document.getElementById("password").value
+
+try {
+
+await signInWithEmailAndPassword(auth,email,password)
+
+location.href="/admin.html"
+
+} catch(e){
+
+alert("ログイン失敗")
+
+}
+
+}
+
+</script>
+
+</head>
+
+
+<body class="bg-slate-100 flex items-center justify-center h-screen">
+
+<div class="bg-white p-10 rounded-xl shadow w-96">
+
+<h1 class="text-2xl font-semibold mb-6">
+Admin Login
+</h1>
+
+<input
+id="email"
+placeholder="email"
+class="border w-full p-2 mb-4 rounded">
+
+<input
+id="password"
+type="password"
+placeholder="password"
+class="border w-full p-2 mb-6 rounded">
+
+<button
+onclick="login()"
+class="bg-black text-white w-full py-2 rounded">
+ログイン
+</button>
+
+</div>
+
+</body>
+</html>

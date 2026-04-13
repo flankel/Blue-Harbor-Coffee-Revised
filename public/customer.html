@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Information | Blue Harbor Coffee</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Zen Kaku Gothic New', sans-serif; color: #333; font-variant-numeric: tabular-nums;}
+  .font-eng {
+    font-family: 'Jost', sans-serif;
+  }
+  .nav-link.active {
+    border-bottom: 2px solid #3b82f6;
+    color: #1d4ed8;
+  }
+  .nav-link.active svg {
+    color: #1d4ed8;
+  }
+</style>
+</head>
+
+
+<body class="bg-slate-50 text-slate-800 pt-40 md:pt-24">
+
+<!-- Header -->
+<div id="header"></div>
+
+<!-- =========================
+     ページタイトル
+========================= -->
+<div class="max-w-3xl mx-auto px-6 mt-6">
+
+<h1 class="text-3xl sm:text-4xl font-light tracking-wide">
+Customer Information
+</h1>
+
+<p class="text-sm text-slate-500 mt-2">
+ご注文内容の確認とお客様情報の入力をお願いいたします
+</p>
+
+</div>
+
+
+<div class="max-w-3xl mx-auto px-6 py-12">
+
+<!-- =========================
+     注文内容（上部）
+========================= -->
+<div class="bg-white p-8 rounded-2xl shadow-sm mb-12">
+
+<h2 class="text-2xl mb-6 font-semibold">
+ご注文内容
+</h2>
+
+<div id="cartItems" class="space-y-4 text-sm"></div>
+
+<div class="border-t mt-6 pt-4 flex justify-between text-lg font-semibold">
+<span>合計</span>
+<span id="totalPrice">¥0</span>
+</div>
+
+</div>
+
+
+<!-- =========================
+     お客様情報
+========================= -->
+<div class="bg-white p-10 rounded-2xl shadow-sm">
+
+<h2 class="text-2xl mb-2 font-semibold">
+お客様情報
+</h2>
+
+<div id="formNotice" class="text-xs mt-4 mb-8 space-y-1 leading-relaxed"></div>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+<!-- 名前 -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-800">
+お名前 <span class="text-red-500">*</span>
+</label>
+<input id="name" type="text"
+class="border p-3 rounded-lg w-full focus:ring-2 focus:ring-black focus:outline-none"
+placeholder="山田 太郎">
+</div>
+
+<!-- 電話 -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-800">
+電話番号 <span class="text-red-500">*</span>
+</label>
+<input id="phone" type="tel"
+class="border p-3 rounded-lg w-full focus:ring-2 focus:ring-black focus:outline-none"
+placeholder="090-1234-5678">
+</div>
+
+<!-- メール -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-800">
+メールアドレス <span class="text-red-500">*</span>
+</label>
+<input id="email" type="email"
+class="border p-3 rounded-lg w-full focus:ring-2 focus:ring-black focus:outline-none"
+placeholder="example@email.com">
+</div>
+
+<!-- 来店日 -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-800">
+来店日 <span class="text-red-500">*</span>
+</label>
+<input id="datePicker" type="date"
+class="border p-3 rounded-lg w-full focus:ring-2 focus:ring-black focus:outline-none">
+</div>
+
+<!-- 来店時間 -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-800">
+来店時間 <span class="text-red-500">*</span>
+</label>
+<select id="timePicker"
+class="border p-3 rounded-lg w-full focus:ring-2 focus:ring-black focus:outline-none">
+</select>
+</div>
+
+</div>
+
+<!-- 問い合わせ -->
+<div class="mt-8 space-y-2">
+<label class="text-sm font-semibold text-slate-800">
+ご質問・お問い合わせ（任意）
+</label>
+<textarea id="message" rows="4"
+class="border p-3 rounded-lg w-full focus:ring-2 focus:ring-black focus:outline-none"
+placeholder="アレルギーの有無やご要望などがあればご記入ください"></textarea>
+</div>
+
+
+<!-- =========================
+     個人情報
+========================= -->
+<div class="mt-10">
+
+<h3 class="font-semibold mb-2">
+個人情報の取り扱いについて
+</h3>
+
+<div class="border rounded-lg p-4 h-40 overflow-y-auto text-sm text-slate-600 bg-slate-50">
+当店では、お客様の個人情報（氏名・電話番号・メールアドレス等）を、
+ご注文の確認・商品提供・ご連絡の目的のみに使用いたします。
+第三者への提供は行いません。
+</div>
+
+<label class="flex items-center mt-4 gap-2 text-sm">
+<input type="checkbox" id="agree" class="w-4 h-4">
+個人情報の取り扱いに同意する
+</label>
+
+</div>
+
+
+<!-- Buttons -->
+<div class="flex gap-4 mt-10">
+
+<button onclick="backToMenu()"
+class="w-full bg-gray-200 py-4 rounded-xl hover:bg-gray-300 transition text-center leading-tight">
+商品選択へ<br class="sm:hidden">戻る
+</button>
+     
+<button id="confirmBtn"
+onclick="goConfirm()"
+disabled
+class="w-full bg-gray-300 text-white py-4 rounded-xl cursor-not-allowed transition">
+注文確認へ
+</button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-50 border-t border-gray-200 py-12 text-center text-xs text-gray-400">
+© 2024 Blue Harbor Coffee Roasters.
+</footer>
+
+<script src="/js/components/loadHeader.js"></script>
+<script type="module" src="/js/pages/customer.js"></script>
+
+</body>
+</html>

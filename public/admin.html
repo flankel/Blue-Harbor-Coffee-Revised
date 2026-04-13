@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Admin</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"
+import {
+getAuth,
+onAuthStateChanged,
+signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyBlBC7PgW3aCvulWTJu3YMs9HPRydRdjY0",
+  authDomain: "blue-harbor-takeout.firebaseapp.com",
+  projectId: "blue-harbor-takeout",
+}
+
+const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
+
+onAuthStateChanged(auth,(user)=>{
+
+if(!user){
+location.href="/login.html"
+}
+
+})
+
+window.logout=()=>{
+
+signOut(auth)
+location.href="/login.html"
+
+}
+
+</script>
+
+</head>
+
+
+<body class="bg-slate-100 text-slate-800">
+
+<div class="max-w-7xl mx-auto p-10">
+
+<!-- ヘッダー -->
+
+<div class="flex justify-between mb-10">
+
+<h1 class="text-3xl font-semibold">
+Cafe Order Dashboard
+</h1>
+
+<button
+onclick="logout()"
+class="bg-red-500 text-white px-4 py-2 rounded">
+ログアウト
+</button>
+
+</div>
+
+
+<!-- ダッシュボード -->
+
+<div class="grid md:grid-cols-4 gap-4 mb-10">
+
+<div class="bg-white p-6 rounded-xl shadow">
+<p class="text-sm text-slate-500">注文数</p>
+<p id="orderCount" class="text-2xl font-semibold">0</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<p class="text-sm text-slate-500">今日の売上</p>
+<p id="todaySales" class="text-2xl font-semibold">¥0</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<p class="text-sm text-slate-500">準備中</p>
+<p id="preparingCount" class="text-2xl font-semibold">0</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<p class="text-sm text-slate-500">受渡し待ち</p>
+<p id="readyCount" class="text-2xl font-semibold">0</p>
+</div>
+
+</div>
+
+
+<!-- フィルター -->
+
+<div class="bg-white p-6 rounded-xl shadow mb-10 flex flex-wrap gap-4 items-center">
+
+<input
+id="searchInput"
+type="text"
+placeholder="名前・電話で検索"
+class="border rounded-lg px-3 py-2 w-64">
+
+<input
+id="filterDate"
+type="date"
+class="border rounded-lg px-3 py-2">
+
+<button
+onclick="clearFilter()"
+class="bg-slate-500 text-white px-4 py-2 rounded">
+
+クリア
+
+</button>
+
+</div>
+
+
+<!-- タブ（追加部分） -->
+
+<div class="flex gap-3 mb-6">
+
+<button
+onclick="switchTab('past')"
+class="tabBtn bg-slate-200 px-4 py-2 rounded">
+過去の注文
+</button>
+
+<button
+onclick="switchTab('today')"
+class="tabBtn bg-slate-800 text-white px-4 py-2 rounded">
+本日の注文
+</button>
+
+<button
+onclick="switchTab('future')"
+class="tabBtn bg-slate-200 px-4 py-2 rounded">
+未来の予約
+</button>
+
+</div>
+
+
+<!-- 注文一覧 -->
+
+<div
+id="orders"
+class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+</div>
+
+</div>
+
+<script type="module" src="/js/pages/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Harbor Coffee | Specialty Coffee Roaster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <style> body { word-break: break-all; line-break: strict; font-family: 'Zen Kaku Gothic New', sans-serif; color: #333; } .font-eng { font-family: 'Jost', sans-serif; } .page-enter { animation: fadeIn 0.6s ease-out forwards; } @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } } .nav-link.active { color: #1d4ed8 !important; border-bottom: 2px solid #3b82f6; } .nav-link.active svg { color: #1d4ed8 !important; } ul, ul.list-disc { list-style: none !important; padding-left: 0 !important; } /* ========================= Bean List（完全リニューアル） ========================= */ .bean-list li { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; line-height: 1.4; padding-left: 0; /* ★削除 */ } /* ★ 疑似要素の豆を完全削除 */ .bean-list li::before, .bean-list li::after { display: none !important; } /* ★ SVG豆サイズ調整 */ .bean-list svg { width: 28px; height: auto; flex-shrink: 0; } /* テキスト側 */ .bean-list li .name-en { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1d4ed8; } .bean-list li .name-jp { font-weight: 500; font-size: 0.95rem; color: #333; } .bean-list li .desc { font-size: 0.85rem; color: #666; margin-top: 2px; } /* ★ 追加：マグを並べるための行 */ .mug-row { display: flex; justify-content: center; /* ★中央寄せ */ align-items: flex-end; gap: 12px; width: 100%; /* ★幅を明示 */ } </style>
+  </head>
+  <body class="bg-white flex flex-col min-h-screen">
+    <div id="header"></div>
+    <main class="flex-grow">
+      <!-- HERO -->
+      <section class="relative h-[80vh] md:h-[620px] w-full overflow-hidden page-enter">
+        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=2000&q=80" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative h-full flex items-center justify-center text-white text-center">
+          <h1 class="text-5xl md:text-7xl font-eng font-bold tracking-widest">ABOUT US</h1>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY -->
+      <section class="bg-white py-24 px-6">
+        <h2 class="text-center mb-20">
+          <div class="bean-decoration mb-6">
+            <div class="mug-row"></div>
+          </div>
+          <span class="block text-xs tracking-[0.5em] text-gray-400 font-eng mb-2">BLUE HARBOR COFFEE</span>
+          <span class="text-4xl md:text-5xl font-light tracking-widest text-gray-900">PHILOSOPHY</span>
+          <div class="bean-decoration mt-6">
+            <div class="mug-row"></div>
+          </div>
+        </h2>
+
+        <div class="max-w-3xl mx-auto text-center">
+          <p id="philosophy-lead" class="text-xl md:text-2xl text-gray-700 mb-8"></p>
+          <p id="philosophy-text1" class="text-gray-600 mb-6"></p>
+          <p id="philosophy-text2" class="text-gray-600"></p>
+        </div>
+      </section>
+
+      <!-- OWNER -->
+      <section class="bg-slate-50 py-24 px-6">
+        <h2 class="text-center mb-16">
+          <div class="bean-decoration mb-6">
+            <div class="mug-row"></div>
+          </div>
+          <span class="text-4xl md:text-5xl font-light tracking-widest text-gray-900">OWNER</span>
+          <div class="bean-decoration mt-6">
+            <div class="mug-row"></div>
+          </div>
+        </h2>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <img src="/assets/images/AboutUs/farmer.png" class="w-full rounded-xl shadow-lg object-cover">
+          <div>
+            <h3 id="owner-name" class="text-2xl font-medium mb-6"></h3>
+            <p id="owner-text1" class="mb-4"></p>
+            <p id="owner-text2"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEANS -->
+      <section class="bg-white py-24 px-6">
+        <h2 class="text-center mb-16">
+          <div class="bean-decoration mb-6">
+            <div class="mug-row"></div>
+          </div>
+          <span class="text-4xl md:text-5xl font-light tracking-widest text-gray-900">SIGNATURE BEANS</span>
+          <div class="bean-decoration mt-6">
+            <div class="mug-row"></div>
+          </div>
+        </h2>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <img src="/assets/images/AboutUs/farmer.png" class="w-full rounded-xl shadow-lg object-cover">
+          <div>
+            <h3 id="beans-title" class="text-2xl font-medium mb-6"></h3>
+            <p id="beans-text" class="mb-4"></p>
+            <ul id="beans-list" class="bean-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRUITS -->
+      <section class="bg-amber-50 py-24 px-6">
+        <h2 class="text-center mb-16">
+          <div class="bean-decoration mb-6">
+            <div class="mug-row"></div>
+          </div>
+          <span class="text-4xl md:text-5xl font-light tracking-widest text-gray-900">FRUITS</span>
+          <div class="bean-decoration mt-6">
+            <div class="mug-row"></div>
+          </div>
+        </h2>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <img src="/assets/images/AboutUs/blueberry_lemon.png" class="w-full rounded-xl shadow-lg object-cover">
+          <div>
+            <p id="fruits-text" class="mb-4"></p>
+            <ul id="fruits-list" class="bean-list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t py-12 text-center text-xs text-gray-400 font-eng">© 2024 Blue Harbor Coffee Roasters.</footer>
+
+    <!-- ★ コーヒー豆SVG（単体テンプレ） -->
+    <template id="coffee-beans">
+      <svg width="44" height="70" viewbox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialgradient id="beanMain" cx="35%" cy="25%" r="75%">
+            <stop offset="0%" stop-color="#e6b67f"></stop>
+            <stop offset="40%" stop-color="#c48744"></stop>
+            <stop offset="80%" stop-color="#8a5528"></stop>
+            <stop offset="100%" stop-color="#4d2c14"></stop>
+          </radialgradient>
+
+          <radialgradient id="beanHighlight" cx="25%" cy="20%" r="45%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.7)"></stop>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"></stop>
+          </radialgradient>
+
+          <radialgradient id="beanShadow" cx="75%" cy="80%" r="55%">
+            <stop offset="0%" stop-color="rgba(0,0,0,0.35)"></stop>
+            <stop offset="100%" stop-color="rgba(0,0,0,0)"></stop>
+          </radialgradient>
+
+          <radialgradient id="grooveCore" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#1a0d05"></stop>
+            <stop offset="60%" stop-color="#2b160a"></stop>
+            <stop offset="100%" stop-color="#5a3416"></stop>
+          </radialgradient>
+
+          <lineargradient id="grooveEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.25)"></stop>
+            <stop offset="50%" stop-color="rgba(255,255,255,0)"></stop>
+            <stop offset="100%" stop-color="rgba(0,0,0,0.2)"></stop>
+          </lineargradient>
+        </defs>
+
+        <g transform="rotate(28 30 45)">
+          <ellipse cx="30" cy="45" rx="22" ry="30" fill="url(#beanMain)"></ellipse>
+          <ellipse cx="20" cy="28" rx="10" ry="12" fill="url(#beanHighlight)"></ellipse>
+          <ellipse cx="40" cy="62" rx="14" ry="16" fill="url(#beanShadow)"></ellipse>
+          <ellipse cx="30" cy="45" rx="5.5" ry="26" fill="url(#grooveCore)"></ellipse>
+          <ellipse cx="29.5" cy="45" rx="6.5" ry="27" fill="none" stroke="url(#grooveEdge)" stroke-width="1.2" opacity="0.6"></ellipse>
+        </g>
+      </svg>
+    </template>
+
+    <!-- coffee mug -->
+    <template id="coffee-mug">
+      <svg width="32" height="52" viewbox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+        <!-- 湯気（♨︎風） -->
+        <g stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round">
+          <!-- 左 -->
+          <path d="M20 24 C14 18, 26 16, 20 10 C16 6, 24 6, 20 2">
+            <animatetransform attributename="transform" type="translate" values="0 0; 1 -2; 0 0" dur="2.4s" repeatcount="indefinite"></animatetransform>
+          </path>
+
+          <!-- 中央（少し大きく） -->
+          <path d="M30 24 C24 18, 36 16, 30 10 C26 6, 34 6, 30 2">
+            <animatetransform attributename="transform" type="translate" values="0 0; 0 -3; 0 0" dur="2s" repeatcount="indefinite"></animatetransform>
+          </path>
+
+          <!-- 右 -->
+          <path d="M40 24 C34 18, 46 16, 40 10 C36 6, 44 6, 40 2">
+            <animatetransform attributename="transform" type="translate" values="0 0; -1 -2; 0 0" dur="2.6s" repeatcount="indefinite"></animatetransform>
+          </path>
+        </g>
+
+        <!-- カップ -->
+        <rect x="15" y="30" width="30" height="26" rx="5" fill="#8B5E3C" stroke="#5A3E2B" stroke-width="1.2"></rect>
+
+        <!-- 持ち手 -->
+        <path d="M45 35 C55 35, 55 50, 45 50" fill="none" stroke="#5A3E2B" stroke-width="1.4" stroke-linecap="round"></path>
+
+        <!-- ソーサー -->
+        <ellipse cx="30" cy="62" rx="20" ry="4" fill="#A67C52" opacity="0.9"></ellipse>
+
+        <!-- 影 -->
+        <ellipse cx="30" cy="66" rx="16" ry="3" fill="#000" opacity="0.08"></ellipse>
+      </svg>
+    </template>
+
+    <script src="/js/components/loadHeader.js"></script>
+    <script src="/js/pages/aboutUs.js"></script>
+  </body>
+</html>
