@@ -1,0 +1,79 @@
+{
+  "config": {
+    "openHour": 8,
+    "weekdayClose": 21,
+    "weekendClose": 23,
+    "closedDay": 3,
+    "reserveLimitDays": 7
+  },
+
+  "hero": {
+    "image": "/images/StoreInfo/hero.png",
+    "title": "STORE INFO"
+  },
+
+  "gallery": [
+    {
+      "src": "/images/StoreInfo/store-exterior-1.png",
+      "alt": "Blue Harbor Coffee 外観1"
+    },
+    {
+      "src": "/images/StoreInfo/store-exterior-3.png",
+      "alt": "Blue Harbor Coffee 外観2"
+    },
+    {
+      "src": "/images/StoreInfo/parking.png",
+      "alt": "Blue Harbor Coffee 駐車場"
+    }
+  ],
+
+  "map": {
+    "image": "/images/StoreInfo/map-drawing.png",
+    "googleEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.023247071477!2d139.7508678!3d35.6583925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bc83f05d54b%3A0xb36a6f1d22223403!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+  },
+
+  "store": {
+    "name": "Blue Harbor Coffee",
+    "address": "〒105-0011 東京都港区芝公園 4-2-8",
+    "phone": "03-1234-5678",
+
+    "concept": "海辺をイメージした落ち着いた空間で、こだわりの自家焙煎コーヒーを提供しています。",
+
+    "access": [
+      "都営三田線「芝公園駅」徒歩3分",
+      "JR「浜松町駅」徒歩10分"
+    ]
+  },
+
+  "hours": [
+    { "day": "月", "open": "08:00", "close": "21:00" },
+    { "day": "火", "open": "08:00", "close": "21:00" },
+    { "day": "水", "closed": true },
+    { "day": "木", "open": "08:00", "close": "21:00" },
+    { "day": "金", "open": "08:00", "close": "23:00" },
+    { "day": "土", "open": "08:00", "close": "23:00", "highlight": "blue" },
+    {
+      "day": "日",
+      "open": "08:00",
+      "close": "21:00",
+      "highlight": "red",
+      "note": "※翌日が祝日の場合 08:00 — 23:00"
+    },
+    { "day": "祝", "open": "08:00", "close": "21:00", "highlight": "red" }
+  ],
+
+  "facilities": [
+    { "label": "Parking", "value": "15台" },
+    { "label": "Wi-Fi", "value": "完備" },
+    { "label": "Power Outlets", "value": "10口" },
+    { "label": "Seats", "value": "42席" },
+    { "label": "Takeout", "value": "Available" },
+    { "label": "Smoking", "value": "Non-smoking" },
+    { "label": "Payment", "value": "Cash / Credit / IC" }
+  ],
+
+  "sns": {
+    "instagram": "#",
+    "twitter": "#"
+  }
+}

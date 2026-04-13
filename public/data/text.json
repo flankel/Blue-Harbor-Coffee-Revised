@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "subtitle": "ROASTERY & CAFE",
+    "title": "BREW THE BLUE",
+    "button": "VIEW MENU"
+  },
+  "concept": {
+    "label": "FROM MORNING TO NIGHT",
+    "title": "時間とともに変わる、ひとつの空間",
+    "desc": "同じ場所でも、光・音・空気は刻々と変わる。\nBlue Harbor は、一日のどの瞬間にも寄り添います。"
+  },
+  "sections": [
+    {
+      "key": "morning",
+      "title": "MORNING",
+      "subtitle": "静けさと光に包まれる、はじまりの一杯",
+      "body": [
+        "柔らかな朝の光が差し込む店内。",
+        "まだ人の少ない静かな時間に、",
+        "一杯のコーヒーと向き合う贅沢。"
+      ],
+      "image": "./images/Home/morning.png",
+      "bg": "bg-amber-50",
+      "reverse": false
+    },
+    {
+      "key": "daytime",
+      "title": "DAYTIME",
+      "subtitle": "会話と活気が生まれる場所",
+      "body": [
+        "昼の店内は、光と人で満ちていく。",
+        "仕事、会話、待ち合わせ。",
+        "それぞれの時間が重なり、空間は穏やかな活気に包まれます。"
+      ],
+      "image": "./images/Home/daytime.png",
+      "bg": "bg-white",
+      "reverse": true
+    },
+    {
+      "key": "night",
+      "title": "NIGHT",
+      "subtitle": "灯りが深める、落ち着いた時間",
+      "body": [
+        "照明が落ち着き、音もやわらぐ夜。",
+        "昼とはまったく違う、静かな表情へ。",
+        "一日の終わりに、心をほどくための場所。"
+      ],
+      "image": "./images/Home/night.png",
+      "bg": "bg-slate-900",
+      "text": "text-gray-200",
+      "titleColor": "text-white"
+    }
+  ]
+}

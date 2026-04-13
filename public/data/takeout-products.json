@@ -1,0 +1,167 @@
+{
+  "beans": [
+    {
+      "id": "A",
+      "name": {
+        "jp": "エチオピア ナチュラル",
+        "en": "Ethiopian Natural"
+      },
+      "desc": {
+        "jp": "ベリーのような甘さと華やかな香り。エチオピア南部の高地で栽培。",
+        "en": "Berry-like sweetness with floral aroma. Grown in southern Ethiopia highlands."
+      },
+      "tag": "おすすめ",
+      "image": "/images/TakeOut/Beans/EthiopianNatural.png",
+      "sizes": {
+        "100": 850,
+        "200": 1600,
+        "300": 2250
+      }
+    },
+    {
+      "id": "B",
+      "name": {
+        "jp": "コロンビア スプレモ",
+        "en": "Colombia Supremo"
+      },
+      "desc": {
+        "jp": "バランスの良い味わいとやさしいコク。毎日飲みたくなる定番。",
+        "en": "Well-balanced flavor with mild richness. A perfect daily coffee."
+      },
+      "tag": "",
+      "image": "/images/TakeOut/Beans/ColombiaSupremo.png",
+      "sizes": {
+        "100": 800,
+        "200": 1500,
+        "300": 2100
+      }
+    },
+    {
+      "id": "C",
+      "name": {
+        "jp": "グアテマラ SHB",
+        "en": "Guatemala SHB"
+      },
+      "desc": {
+        "jp": "チョコレートのようなコクとほのかな酸味。標高の高い地域で栽培。",
+        "en": "Rich chocolate-like body with subtle acidity from high-altitude farms."
+      },
+      "tag": "人気",
+      "image": "/images/TakeOut/Beans/GuatemalaSHB.png",
+      "sizes": {
+        "100": 900,
+        "200": 1700,
+        "300": 2400
+      }
+    },
+    {
+      "id": "D",
+      "name": {
+        "jp": "ブラジル サントス",
+        "en": "Brazil Santos"
+      },
+      "desc": {
+        "jp": "ナッツのような香ばしさとやわらかな口当たり。",
+        "en": "Nutty aroma with a smooth and gentle mouthfeel."
+      },
+      "tag": "",
+      "image": "/images/TakeOut/Beans/BrazilSantos.png",
+      "sizes": {
+        "100": 750,
+        "200": 1400,
+        "300": 1950
+      }
+    },
+    {
+      "id": "E",
+      "name": {
+        "jp": "ケニア AA",
+        "en": "Kenya AA"
+      },
+      "desc": {
+        "jp": "しっかりしたコクと明るい酸味。フルーティーな後味が特徴。",
+        "en": "Full-bodied with bright acidity and a fruity finish."
+      },
+      "tag": "No.1",
+      "image": "/images/TakeOut/Beans/KenyaAA.png",
+      "sizes": {
+        "100": 950,
+        "200": 1800,
+        "300": 2550
+      }
+    }
+  ],
+
+  "sweets": [
+    {
+      "id": "S1",
+      "name": {
+        "jp": "クラシック カスタードプリン",
+        "en": "Classic Custard Pudding"
+      },
+      "desc": {
+        "jp": "昔ながらの濃厚プリン。ほろ苦いカラメルがアクセント。",
+        "en": "Rich traditional pudding with bittersweet caramel."
+      },
+      "tag": "No.1",
+      "image": "/images/TakeOut/Sweets/ClassicCustardPudding.png",
+      "price": 520
+    },
+    {
+      "id": "S2",
+      "name": {
+        "jp": "瀬戸内レモンタルト",
+        "en": "Setouchi Lemon Tart"
+      },
+      "desc": {
+        "jp": "瀬戸内レモンの爽やかな酸味とサクサクのタルト生地。",
+        "en": "Refreshing Setouchi lemon with a crispy tart base."
+      },
+      "tag": "おすすめ",
+      "image": "/images/TakeOut/Sweets/SetouchiLemonTart.png",
+      "price": 720
+    },
+    {
+      "id": "S3",
+      "name": {
+        "jp": "瀬戸内レモンパウンドケーキ",
+        "en": "Setouchi Lemon Pound Cake"
+      },
+      "desc": {
+        "jp": "しっとり食感とやさしいレモンの香り。",
+        "en": "Moist texture with a gentle lemon aroma."
+      },
+      "tag": "",
+      "image": "/images/TakeOut/Sweets/SetouchiLemonPoundCake.png",
+      "price": 520
+    },
+    {
+      "id": "S4",
+      "name": {
+        "jp": "ブルーベリーチーズケーキ",
+        "en": "Blueberry Cheesecake"
+      },
+      "desc": {
+        "jp": "濃厚チーズと甘酸っぱいブルーベリーの相性が抜群。",
+        "en": "Rich cheesecake paired with sweet and tangy blueberries."
+      },
+      "tag": "人気",
+      "image": "/images/TakeOut/Sweets/BlueberryCheesecake.png",
+      "price": 780
+    },
+    {
+      "id": "S5",
+      "name": {
+        "jp": "ブルーベリースコーン",
+        "en": "Blueberry Scone"
+      },
+      "desc": {
+        "jp": "外はサクッと中はしっとり。コーヒーとの相性◎。",
+        "en": "Crispy outside, moist inside. Perfect with coffee."
+      },
+      "tag": "",
+      "image": "/images/TakeOut/Sweets/BlueberryScone.png",
+      "price": 480
+    }
+  ]
+}

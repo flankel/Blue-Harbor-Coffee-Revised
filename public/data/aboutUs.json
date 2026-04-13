@@ -1,0 +1,46 @@
+{
+  "philosophy": {
+    "lead": "静かな港に差し込む朝の光のように、日常に上質な余白と安らぎをもたらす場所。",
+    "text1": "Blue Harbor Coffee は、「本当に価値のある一杯」と「記憶に残る時間」を提供するために生まれました。",
+    "text2": "慌ただしい都市の中でも、ここでは時間がゆっくりと流れます。香り、味わい、空間、サービス――そのすべてが、あなたの五感を満たすために設計されています。"
+  },
+  "owner": {
+    "name": "Taro Yamada — Founder & Head Barista",
+    "text1": "国内外の名店で研鑽を積んだ後、“日常の中にある贅沢” を形にするために Blue Harbor Coffee を創設。",
+    "text2": "豆の選定、焙煎、抽出温度、提供タイミング。すべては「最高の一杯」を届けるための要素です。"
+  },
+  "beans": {
+    "title": "Our Specialty Beans",
+    "text": "エチオピア、コロンビア、グアテマラ、ブラジル、ケニアの5カ国の農園と直接契約し、品質・倫理・持続可能性を満たした豆のみを仕入れています。",
+    "list": [
+      {
+        "name": {"en": "Ethiopian Natural", "jp": "エチオピア ナチュラル"},
+        "desc": {"en": "Berry-like sweetness with floral aroma. Grown in southern Ethiopia highlands.", "jp": "ベリーのような甘さと華やかな香り。エチオピア南部の高地で栽培。"}
+      },
+      {
+        "name": {"en": "Colombia Supremo", "jp": "コロンビア スプレモ"},
+        "desc": {"en": "Well-balanced flavor with mild richness. A perfect daily coffee.", "jp": "バランスの良い味わいとやさしいコク。毎日飲みたくなる定番。"}
+      },
+      {
+        "name": {"en": "Guatemala SHB", "jp": "グアテマラ SHB"},
+        "desc": {"en": "Rich chocolate-like body with subtle acidity from high-altitude farms.", "jp": "チョコレートのようなコクとほのかな酸味。標高の高い地域で栽培。"}
+      },
+      {
+        "name": {"en": "Brazil Santos", "jp": "ブラジル サントス"},
+        "desc": {"en": "Nutty aroma with a smooth and gentle mouthfeel.", "jp": "ナッツのような香ばしさとやわらかな口当たり。"}
+      },
+      {
+        "name": {"en": "Kenya AA", "jp": "ケニア AA"},
+        "desc": {"en": "Full-bodied with bright acidity and a fruity finish.", "jp": "しっかりしたコクと明るい酸味。フルーティーな後味が特徴。"}
+      }
+    ]
+  },
+  "fruits": {
+    "text": "デザートを彩るフルーツは、単なる装飾ではありません。コーヒー体験に季節の輝きとみずみずしい余韻を添える、もう一つの主役です。",
+    "list": [
+      "自然豊かな農園で丁寧に育てられたブルーベリーの凝縮した甘みと上品な酸味",
+      "瀬戸内の穏やかな気候が育んだレモンの爽やかな香りと透明感のある酸味",
+      "大地の恵みをそのまま感じられる、旬の果実のみずみずしさ"
+    ]
+  }
+}
